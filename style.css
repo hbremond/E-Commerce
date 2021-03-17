@@ -2,9 +2,6 @@
 .navbar{
     background-color:rgb(139, 150, 32);
 }
-.carousel-item {
-    height: 79vh;
-}
 .pic{
     padding:1rem;
     border-radius:2rem;
@@ -21,5 +18,5 @@ body{
     font-size: 25px;
 }
 .titles{
-    padding-top: 2%;
+    padding: 2%;
 }
