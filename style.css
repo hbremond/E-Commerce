@@ -1,5 +1,9 @@
-.toolcolor{
-background-color:rgb(139, 150, 32);
+.toolcolor,
+.navbar{
+    background-color:rgb(139, 150, 32);
+}
+.carousel-item {
+    height: 79vh;
 }
 .pic{
     padding:1rem;
