@@ -6,6 +6,16 @@ background-color:rgb(139, 150, 32);
     border-radius:2rem;
 }
 footer{
-    background-color: #8B9620;
-    
+    background-color: #8B9620;  
+}
+body{
+    background-color: beige;
+}
+.title_reco{
+    color: rgb(66, 45, 45);
+    font-weight: bold;
+    font-size: 25px;
+}
+.titles{
+    padding-top: 2%;
 }
