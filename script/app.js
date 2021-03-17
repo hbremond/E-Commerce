@@ -1,24 +1,23 @@
-let cart = []
+let cartEntries = []
 
 let products = [
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "w-p-1"},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: "2"},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: ""},
-  {title: "", image: "", description: "", price: "", category: "", subCategory: "", reference: ""}
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "w-p-1" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: "2" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "man-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "Comme une Evidence - L'Eau de Parfum 100ml", image: "./images/eau-de-parfum-comme-une-evidence.jpg", description: "L'harmonie d'un parfum pur et essentiel", price: "57,00", category: "perfume", subCategory: "woman-perfume", reference: "" },
+  { title: "", image: "", description: "", price: "", category: "", subCategory: "", reference: "" }
 ]
 
-products.forEach((product, index) => {
-  console.log(index)
+products.forEach((product) => {
   $('#products .row').append(
     $('<div class="col ' + product.category + ' ' + product.subCategory + '">' +
-        '<div class="card h-100 text-center" data-ref="' + product.reference + '" data-index="' + index + '">' +
+        '<div class="card h-100 text-center" data-ref="' + product.reference + '">' +
           '<img src="' + product.image + '" class="card-img-top" alt="...">' +
           '<div class="card-body d-flex flex-column justify-content-between">' +
             '<h3 class="card-title fs-4">' + product.title + '</h3>' +
@@ -34,25 +33,20 @@ products.forEach((product, index) => {
 
 $('.dropdown-item').on('click', function (event) {
   event.preventDefault()
-  console.log($(event.currentTarget))
-  console.log($(event.currentTarget).data('target'))
-  $('.' + $(event.currentTarget).data('target')).show()
-  // $('.' + $(event.currentTarget).data('target')).show(500)
-  // $('.' + $(event.currentTarget).data('target')).fadeIn(300)
-  $('.col:not(.' + $(event.currentTarget).data('target') + ')').hide()
-  // $('.col:not(.' + $(event.currentTarget).data('target') + ')').hide(500)
-  // $('.col:not(.' + $(event.currentTarget).data('target') + ')').fadeOut(300)
+  $('.' + $(event.currentTarget).data('category')).show()
+  $('.col:not(.' + $(event.currentTarget).data('category') + ')').hide()
 })
 
 $('.card .add-cart').on('click', function(event){
   event.preventDefault()
-  let ref = $(event.currentTarget).parent().parent().data('ref')
-  let index = $(event.currentTarget).parent().parent().data('index')
-  console.log(ref)
-  console.log(index)
+  let referenceProduct = $(event.currentTarget).parent().parent().data('ref')
+  let productToAdd = { referenceProduct, quantity: 1 }
 
-  cart.push(products[index])
-  console.log(cart)
+  if (cartEntries.findIndex(cartEntry => cartEntry.referenceProduct === referenceProduct) === -1) {
+    cartEntries.push(productToAdd)
+  } else {
+    cartEntries.find(cartEntry => cartEntry.referenceProduct === referenceProduct).quantity++
+  }
   
-  $('#cart').text(cart.length)
+  $('#cart').text(cartEntries.length)
 })

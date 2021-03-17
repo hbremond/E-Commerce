@@ -2,14 +2,13 @@
 .navbar{
     background-color:rgb(139, 150, 32);
 }
-.carousel-item {
-    height: 79vh;
-}
 .pic{
     padding:1rem;
     border-radius:2rem;
 }
+#cartModal table img {
+    width: 100px;
+}
 footer{
     background-color: #8B9620;
-    
 }

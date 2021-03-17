@@ -33,17 +33,17 @@
             <a class="nav-link dropdown-toggle gx-5" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">PARFUM</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-target="woman-perfume" href="#">Eau de Parfum Femme</a></li>
-              <li><a class="dropdown-item" data-target="man-perfume" href="#">Eau de Parfum Homme</a></li>
+              <li><a class="dropdown-item" data-category="woman-perfume" href="#">Eau de Parfum Femme</a></li>
+              <li><a class="dropdown-item" data-category="man-perfume" href="#">Eau de Parfum Homme</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle me-10" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">MAQUILLAGE</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-target="foundation" href="#">Teint</a></li>
-              <li><a class="dropdown-item" data-target="mascara" href="#">Yeux</a></li>
-              <li><a class="dropdown-item" data-target="lipstick" href="#">Lèvres</a></li>
+              <li><a class="dropdown-item" data-category="foundation" href="#">Teint</a></li>
+              <li><a class="dropdown-item" data-category="mascara" href="#">Yeux</a></li>
+              <li><a class="dropdown-item" data-category="lipstick" href="#">Lèvres</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -52,9 +52,9 @@
               CORPS & DOUCHE
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-target="body-care" href="#">Soin du Corps</a></li>
-              <li><a class="dropdown-item" data-target="bath-shower" href="#">Bain & Douche</a></li>
-              <li><a class="dropdown-item" data-target="slimming-treatment" href="#">Soin Minceur</a></li>
+              <li><a class="dropdown-item" data-category="body-care" href="#">Soin du Corps</a></li>
+              <li><a class="dropdown-item" data-category="bath-shower" href="#">Bain & Douche</a></li>
+              <li><a class="dropdown-item" data-category="slimming-treatment" href="#">Soin Minceur</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -63,15 +63,97 @@
               CHEVEUX
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-target="shampoo" href="#">Shampooing</a></li>
-              <li><a class="dropdown-item" data-target="conditioner" href="#">Aprés-Shampooing</a></li>
+              <li><a class="dropdown-item" data-category="shampoo" href="#">Shampooing</a></li>
+              <li><a class="dropdown-item" data-category="conditioner" href="#">Aprés-Shampooing</a></li>
             </ul>
           </li>
         </ul>
-        <i class="fas fa-shopping-cart"> Mon Panier <span id="cart"></span></i>
+        <a href="" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart"> Mon Panier <span id="cart"></span></i></a>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="cartModalLabel">Votre panier</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table w-100">
+            <thead>
+              <tr>
+                <th colspan="2">Produit</th>
+                <th>Quantité</th>
+                <th colspan="2">Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
+                <td>
+                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
+                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
+                </td>
+                <td>
+                  <select name="quantity" class="quantity form-select">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                  </select>
+                </td>
+                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
+                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
+                <td>
+                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
+                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
+                </td>
+                <td>
+                  <select name="quantity" class="quantity form-select">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                  </select>
+                </td>
+                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
+                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
+                <td>
+                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
+                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
+                </td>
+                <td>
+                  <select name="quantity" class="quantity form-select">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                  </select>
+                </td>
+                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
+                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-warning">Valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="0">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -97,9 +179,6 @@
   </section>
   <section id="products">
     <div class="container">
-      <!-- <aside class="w-25 vh-100 float-start d-none d-md-block me-3 border border-secondary">
-        test
-      </aside> -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
       </div>
     </div>
@@ -112,7 +191,7 @@
         <li class="m-4"><i class="bi bi-cash-stack btn-lg"></i>satisfait ou remboursé</li>
         <li class="m-4"><i class="bi bi-arrow-left-right btn-lg"></i>Echange en Magasin</li>
     </ul>
-</footer>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
