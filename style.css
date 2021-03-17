@@ -1,4 +1,32 @@
-footer{
+.toolcolor{
+background-color:rgb(139, 150, 32);
+}
+.pic{
+    padding:1rem;
+    border-radius:2rem;
+}
+.social-bloc{
+    background-color: #EFE5D9;
+}
+.content-item{
     background-color: #8B9620;
-    
+    color: white;
+}
+.company-item > li{
+    margin-bottom: 0%;
+    cursor: pointer;
+}
+.company-item{
+    margin-bottom: 0%;
+}
+.icon-size > a > i {
+    font-size: xx-large;
+    color: gray;
+}
+.icon-size>a:link
+{
+    text-decoration: none;
+}
+.client{
+    font-weight: bold;
 }
