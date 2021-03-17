@@ -18,7 +18,7 @@ products.forEach((product, index) => {
   console.log(index)
   $('#products .row').append(
     $('<div class="col ' + product.category + ' ' + product.subCategory + '">' +
-        '<div class="card h-100 text-center" data-ref="' + index + '">' +
+        '<div class="card h-100 text-center" data-ref="' + product.reference + '" data-index="' + index + '">' +
           '<img src="' + product.image + '" class="card-img-top" alt="...">' +
           '<div class="card-body d-flex flex-column justify-content-between">' +
             '<h3 class="card-title fs-4">' + product.title + '</h3>' +
@@ -46,9 +46,12 @@ $('.dropdown-item').on('click', function (event) {
 
 $('.card .add-cart').on('click', function(event){
   event.preventDefault()
-  console.log($(event.currentTarget).parent().parent().data('ref'))
   let ref = $(event.currentTarget).parent().parent().data('ref')
-  cart.push(products[ref])
+  let index = $(event.currentTarget).parent().parent().data('index')
+  console.log(ref)
+  console.log(index)
+
+  cart.push(products[index])
   console.log(cart)
   
   $('#cart').text(cart.length)
