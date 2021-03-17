@@ -1,9 +1,21 @@
-.toolcolor{
-background-color:rgb(139, 150, 32);
+.toolcolor,
+.navbar{
+    background-color:rgb(139, 150, 32);
+}
+.carousel-item {
+    height: 79vh;
 }
 .pic{
     padding:1rem;
     border-radius:2rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 0 -210px;
+    object-position: center 87%;
+    object-position: center; */
+    object-position: center bottom;
+    
 }
 footer{
     background-color: #8B9620;
