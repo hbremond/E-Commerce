@@ -69,10 +69,27 @@
             </ul>
           </li>
         </ul>
-        <a href="" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart"> Mon Panier <span id="cart"></span></i></a>
+        <a href="" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart text-white"> Mon Panier <span id="cart"></span></i></a>
       </div>
     </div>
   </nav>
+  <div class="modal" tabindex="-1" aria-hidden="true" id ="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -90,6 +107,12 @@
               </tr>
             </thead>
             <tbody>
+              <section id="pp">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+                  </div>
+                </div>
+              </section>
               <tr>
                 <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
                 <td>
@@ -201,15 +224,192 @@
       </div>
     </div>
   </section>
-  <footer class="container-fluid justify-content-center p-5">
-    <ul class="d-sm-flex text-white list-unstyled">
-      <li><img src="images/logo.png" alt="Logo de la marque entreprise bioté" /></li>
-      <li class="m-4"><i class="bi bi-telephone-fill btn-lg"></i>0 805 023 040</li>
-      <li class="m-4"><i class="bi bi-lock-fill btn-lg"></i>Paiment sécurisé</li>
-      <li class="m-4"><i class="bi bi-cash-stack btn-lg"></i>satisfait ou remboursé</li>
-      <li class="m-4"><i class="bi bi-arrow-left-right btn-lg"></i>Echange en Magasin</li>
+  <footer class="mt-4">
+    <ul class="d-sm-flex container-fluid align-items-center justify-content-center text-muted list-unstyled social-bloc company-item">
+      <li class="me-4 text-center" data-bs-toggle="modal" data-bs-target="#privacy-item">
+        Vie privée
+      </li>
+      <li class="me-4 text-center" data-bs-toggle="modal" data-bs-target="#trade-item">
+        Conditions de vente 
+      </li>
+      <li class="me-4 text-center" data-bs-toggle="modal" data-bs-target="#notice-item">
+        Avis clients
+      </li>
+      <li class="me-4 text-center icon-size">
+        <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+      </li>
+      <li class="me-4 text-center icon-size">
+       <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a> 
+      </li>
+      <li class="me-4 text-center icon-size">
+        <a href="https://twitter.com/?lang=fr"><i class="bi bi-twitter"></i></a>
+      </li>
+      <li class="me-4 text-center icon-size">
+        <a href="https://www.instagram.com/?hl=fr"><i class="bi bi-instagram"></i></a>
+      </li>
     </ul>
-  </footer>
+    <div class="modal fade" id="privacy-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content content-item">
+          <div class="modal-header">
+            <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+            <h5 class="modal-title ms-5" id="exampleModalLabel">Vie privée</h5>
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Bioté s'engage à garantir un niveau de protection élevé des Données personnelles des Personnes concernées qui utilisent le Site et autres Produits ou Services et de toute autre personne dont elle traite les Données à caractère personnel.
+              Bioté s’engage à respecter la règlementation applicable (notamment les articles 5 et 6 du RGPD) à l’ensemble des Traitements de Données à caractère personnel qu’elle met en œuvre. Plus particulièrement, l’Bioté s’engage notamment à respecter les principes suivants :</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-success">les Données à caractère personnel sont traitées de manière licite, loyale et transparente (licéité, loyauté, transparence) ;</li>
+              <li class="list-group-item list-group-item-success">les Données à caractère personnel sont collectées pour des finalités déterminées, explicites et légitimes, et ne sont pas traitées ultérieurement d’une manière incompatible avec ces finalités (limitation des finalités) ;</li>
+              <li class="list-group-item list-group-item-success">les Données à caractère personnel sont conservées de manière adéquate, pertinente et sont limitées à ce qui est nécessaire au regard des finalités pour lesquelles elles sont traitées (minimisation des données) ;</li>
+              <li class="list-group-item list-group-item-success">les Données à caractère personnel sont exactes, tenues à jour et toutes les mesures raisonnables sont prises pour que les données inexactes, eu égard aux finalités pour lesquelles elles sont traitées, soient effacées ou rectifiées sans tarder (exactitude).</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="trade-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content content-item">
+          <div class="modal-header">
+            <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+            <h5 class="modal-title ms-5" id="exampleModalLabel">Conditions de vente </h5>
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Nous sommes heureux de vous accueillir sur notre site web Bioté pour les commandes depuis nos different rubrique répartis sur le menu du haut n'hésiter pas à allez aux recommendations. Nous nous efforçons d'assurer au mieux de nos possibilités, l'exactitude et la mise à jour des informations diffusées sur ce Site, dont nous nous réservons le droit de corriger, à tout moment et sans préavis, le contenu. Nous déclinons toute responsabilité :</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-success">de tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à la disposition sur le Site,</li>
+              <li class="list-group-item list-group-item-success">et plus généralement de tous dommages, directs ou indirects, quelles qu'en soient les causes, origines, natures ou conséquences, provoqués en raison de l'accès de quiconque au Site, ou de l'impossibilité d'y accéder, de l'utilisation du Site et /ou du crédit accordé à une quelconque information provenant directement ou indirectement de ce dernier.</li>
+              <li class="list-group-item list-group-item-success">Les présentes conditions générales de vente régissent exclusivement les ventes de produits proposés dans le Site. Elles sont systématiquement accessibles sur le présent Site par l'acheteur au moment de l'enregistrement de la commande. Nous vous invitons à consulter le descriptif de chaque produit pour en connaître les caractéristiques.</li>
+              <li class="list-group-item list-group-item-success">En conséquence, le fait de passer commande, implique l'adhésion de l'acheteur à ces conditions générales de vente à l'exclusion de toutes autres conditions présentes dans des prospectus, catalogues émis par le vendeur et notamment celles en vigueur dans les Centres de Beauté Yves Rocher, ces conditions n'ayant qu'une valeur indicative.</li>
+              <li class="list-group-item list-group-item-success">La vente de nos produits sur le présent site est exclusivement réservée au consommateur final c'est-à-dire à toute personne physique n'agissant pas en qualité de commerçant et ayant la capacité juridique de contracter. En conséquence les commandes émanant de professionnels ne seront pas honorées par Yves Rocher. A cet égard, Yves Rocher se réserve le droit d'annuler toute commande à caractère anormal telle qu'une commande portant sur des quantités de produits excédant les besoins normaux d'un consommateur ou les flux de commandes anormaux à une même adresse de facturation et/ou de livraison.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="notice-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content content-item">
+          <div class="modal-header">
+            <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+            <h5 class="modal-title ms-5" id="exampleModalLabel">Avis clients</h5>
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <li class="list-group-item list-group-item-success">Entierement satisfaite des produit vendu <span class="client">Tyffany 46 ans client aguerri</span></li>
+              <li class="list-group-item list-group-item-success">Mon cuir chevelu est mieux entretenue avec Bioté <span class="client">Cassandra 33 ans client intermédiaire</span></li>
+              <li class="list-group-item list-group-item-success">J'adore leur parfum beauté <span class="client">Chloé 23 ans client Débutant</span></li>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <ul class="d-sm-flex justify-content-sm-center container-fluid text-white list-unstyled company-item p-1 toolcolor">
+    <li><a href="#"><img src="images/logo.png" class="img-fluid me-5 ms-0" alt="Logo de la marque entreprise bioté" /></a></li>
+    <li class="my-4 ms-5" data-bs-toggle="modal" data-bs-target="#call-item">
+      <i class="bi bi-telephone-fill btn-lg"></i>0870 42 48
+    </li>
+    <li class="my-4 ms-5" data-bs-toggle="modal" data-bs-target="#buy-item">
+      <i class="bi bi-lock-fill btn-lg"></i>Paiment sécurisé
+    </li>
+    <li class="my-4 ms-5" data-bs-toggle="modal" data-bs-target="#refund-item">
+      <i class="bi bi-cash-stack btn-lg"></i>satisfait ou remboursé
+    </li>
+    <li class="my-4 ms-5" data-bs-toggle="modal" data-bs-target="#exchange-item">
+      <i class="bi bi-arrow-left-right btn-lg"></i>Echange en Magasin
+    </li>
+  </ul>
+  <div class="modal fade" id="call-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content content-item">
+        <div class="modal-header">
+          <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+          <h5 class="modal-title ms-5" id="exampleModalLabel">Numéro Gratuit</h5>
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le numéro 0870 42 48 qui est mis à votre disposition est un numéro gratuit qui vous permet de
+            contacter le service après vente disposer dans tout la France,
+            il se peut que lors de votre appel vous ayez un temps d'attente avant d'avoir un conseiller mais sacher
+            que nous serons là pour vous aidez au mieux avec
+            les produit Bioté n'hésiter pas à regarder les recommendations de nos produits</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="buy-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content content-item">
+        <div class="modal-header">
+          <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+          <h5 class="modal-title ms-5" id="exampleModalLabel">Paiement sécurisé</h5>
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Dans le cadre d’un paiement sécurisé, votre numéro de carte bancaire, date d’expiration et cryptogramme
+            sont cryptés dans
+            la transmission afin de vous protéger et d’assurer qu’aucune donnée ne transite en clair via internet.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="refund-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content content-item">
+        <div class="modal-header">
+          <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+          <h5 class="modal-title ms-5" id="exampleModalLabel">satisfait ou remboursé</h5>
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Si après votre achat vous êtes pas satisfait du produit vous avez 24H suite au
+            click de l'achat pour vous rétracter et vous faire rembourser.
+            Suite à cela aucun remboursement ne sera possible</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exchange-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content content-item">
+        <div class="modal-header">
+          <img src="images/logo.png" class="img-fluid w-25 me-5" alt="Logo de la marque entreprise bioté" />
+          <h5 class="modal-title ms-5" id="exampleModalLabel">Echange en Magasin</h5>
+          <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Vous pouvez faire un échange en magasin equivalent au prix d'achat du produit acheté
+            parmi bien sûr nos recommendations mais si vous ne trouvez pas bien pas de
+            remboursement après 24h dans le cas contraire si vous trouvez mais il dépasse le prix vous devez payer
+            la différence qui résultera entre votre produit acheter et celui que vous avez choisi d'échanger</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
