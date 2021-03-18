@@ -16,15 +16,16 @@
   <header class="header toolcolor">
     <nav class="navbar navbar-dark text-light">
       <div class="container-fluid">
-        <a class="navbar-brand anim"><img class="ms-4" src="logo.png" alt="logo" width="200" height="80"></a>
-        <a>CREATEUR DE LA COSMETIQUE BIOLOGIQUE</a>
-        <a>Offre Courrier | News Letter | Mon Compte</a>
+        <a href="./index.html" class="navbar-brand anim"><img class="ms-4" src="logo.png" alt="logo" width="200" height="80"></a>
+        <h1 class="fs-5 mb-0">CREATEUR DE LA COSMETIQUE BIOLOGIQUE</h1>
+        <div>
+          <a href="#" class="link-light">Offre Courrier</a> | <a href="#" class="link-light">Newsletter</a> | <a href="#" class="link-light">Mon Compte</a>
+        </div>
       </div>
     </nav>
   </header>
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark text-light">
     <div class="container-fluid">
-      <a> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span></button>
@@ -69,7 +70,8 @@
             </ul>
           </li>
         </ul>
-        <a href="" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart text-white"> Mon Panier <span id="cart"></span></i></a>
+        <a href="#" class="cartButton" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart text-white"> Mon Panier <span id="cartLength"></span></i></a>
+        <!-- <button class="btn btn-light cartButton" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fas fa-shopping-cart"> Mon Panier <span id="cartLength"></span></i></button> -->
       </div>
     </div>
   </nav>
@@ -91,7 +93,7 @@
     </div>
   </div>
   <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="cartModalLabel">Votre panier</h2>
@@ -106,120 +108,61 @@
                 <th colspan="2">Prix</th>
               </tr>
             </thead>
-            <tbody>
-              <section id="pp">
-                <div class="container">
-                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
-                  </div>
-                </div>
-              </section>
-              <tr>
-                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
-                <td>
-                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
-                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
-                </td>
-                <td>
-                  <select name="quantity" class="quantity form-select">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="1">5</option>
-                  </select>
-                </td>
-                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
-                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
-              </tr>
-              <tr>
-                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
-                <td>
-                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
-                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
-                </td>
-                <td>
-                  <select name="quantity" class="quantity form-select">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="1">5</option>
-                  </select>
-                </td>
-                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
-                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
-              </tr>
-              <tr>
-                <td><img src="./images/eau-de-parfum-comme-une-evidence.jpg" alt=""></td>
-                <td>
-                  <h4 class="fs-5">Comme une Evidence - L'Eau de Parfum 100ml</h4>
-                  <p>Ref. : <span class="refProduct">w-p-1</span></p>
-                </td>
-                <td>
-                  <select name="quantity" class="quantity form-select">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="1">5</option>
-                  </select>
-                </td>
-                <td><p class="price text-danger fs-4 fw-bold">119,60 €</p></td>
-                <td><a href="#" title="supprimer l'article"><i class="far fa-trash-alt"></i></a></td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
+            <!-- <tfoot></tfoot> -->
           </table>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-warning">Valider</button>
+          <button type="button" class="btn btn-warning validate">Valider</button>
         </div>
       </div>
     </div>
   </div>
-  
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="pic1.png" class="d-block w-100 pic" alt="...">
+  <section id="home" class="mb-5">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pic1.png" class="d-block w-100 pic" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="pic2.png" class="d-block w-100 pic" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="pic4.png" class="d-block w-100 pic" alt="...">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="pic2.png" class="d-block w-100 pic" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="pic4.png" class="d-block w-100 pic" alt="...">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-  <div class="text-center">
-    <h2 class="title_reco titles">RECOMMANDATIONS</h2>
-    <section id="recommandations">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+    <div class="text-center">
+      <h2 class="titles">RECOMMANDATIONS</h2>
+      <section id="recommandations">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+          </div>
         </div>
-      </div>
-    </section>
-    <h2 class="title_reco titles">IDEES CADEAUX</h2>
-    <section id="gifts">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+      </section>
+      <h2 class="titles">IDEES CADEAUX</h2>
+      <section id="gifts">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+          </div>
         </div>
-      </div>
-    </section>  
-</div>
-  <section id="home">
+      </section>
+    </div>
   </section>
+
   <section id="products">
     <div class="container">
+      <h2 class="titles"></h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
       </div>
     </div>

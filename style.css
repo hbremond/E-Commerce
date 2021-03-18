@@ -6,12 +6,24 @@ body{
 footer {
     background-color:rgb(139, 150, 32);
 }
+#products {
+    display: none;
+}
+.cartButton {
+    position:relative;
+}
+#cartModal table img {
+    width: 100%;
+}
+#cartModal table tbody td:first-child{
+    width: 15%;
+}
+#cartModal table tbody td:nth-child(2){
+    width: 50%;
+}
 .pic{
     padding:1rem;
     border-radius:2rem;
-}
-#cartModal table img {
-    width: 100px;
 }
 .titles{
     padding: 2%;
