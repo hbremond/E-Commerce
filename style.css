@@ -10,12 +10,33 @@ footer {
     padding:1rem;
     border-radius:2rem;
 }
-#cartModal table img {
-    width: 100px;
-}
 .titles{
     padding: 2%;
     color: rgb(66, 45, 45);
     font-weight: bold;
     font-size: 25px;
 }
+#products {
+    display: none;
+}
+.cartButton {
+    position:relative;
+}
+/* .cartButton span{
+    position:absolute;
+    bottom: -10px;
+    left: -10px;
+} */
+#cartModal table img {
+    /* width: 100px; */
+    width: 100%;
+}
+#cartModal table tbody td:first-child{
+    width: 15%;
+}
+#cartModal table tbody td:nth-child(2){
+    width: 50%;
+}
+/* #cartModal table tbody td:nth-child(3){
+    width: 30%;
+} */
